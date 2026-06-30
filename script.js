@@ -2,7 +2,7 @@ const versiculos = [
   { texto:"Tú, pues, hijo mío, esfuérzate en la gracia que es en Cristo Jesús.", ref:"2 Timoteo 2:1" },
   { texto:"Todo lo puedo en Cristo que me fortalece.", ref:"Filipenses 4:13" },
   { texto:"Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí.", ref:"Gálatas 2:20" },
-  { texto:"Somos más que vencedores por medio de aquel que nos amó.", ref:"Romanos 8:37" },
+  { texto:"Somos más que vencedores por medio del que nos amó.", ref:"Romanos 8:37" },
   { texto:"Al que venciere, le daré que se siente conmigo en mi trono.", ref:"Apocalipsis 3:21" },
   { texto:"Esfuérzate y sé valiente; no temas ni desmayes.", ref:"Josué 1:9" },
   { texto:"En mi corazón he guardado tus dichos, para no pecar contra ti.", ref:"Salmos 119:11" },
@@ -36,11 +36,10 @@ function mostrar(){
   const textoEl = document.getElementById("texto");
   const refEl = document.getElementById("ref");
 
-  // 1. desaparecer suave
+  // fade out
   textoEl.style.opacity = 0;
   refEl.style.opacity = 0;
 
-  // 2. esperar a que desaparezca completamente
   setTimeout(() => {
 
     const actual = versiculos[orden[posicion]];
@@ -49,13 +48,13 @@ function mostrar(){
     textoEl.innerText = actual.texto;
     refEl.innerText = actual.ref;
 
-    // 3. pequeño delay antes de aparecer (más natural)
+    // fade in
     setTimeout(() => {
       textoEl.style.opacity = 1;
       refEl.style.opacity = 1;
     }, 120);
 
-  }, 900); // tiempo del fade out (más lento = más suave)
+  }, 900);
 }
 
 function nuevoVersiculo(){
@@ -64,13 +63,19 @@ function nuevoVersiculo(){
 
 preparar();
 mostrar();
-const musica = document.getElementById("musica");
 
-function iniciarMusica(){
-  musica.volume = 0.2; // volumen suave
-  musica.play();
-}
+/* 🎧 AUDIO (CORREGIDO PARA MÓVIL Y PC) */
 
-// se activa con la primera interacción del usuario
-document.addEventListener("click", iniciarMusica, { once: true });
-document.addEventListener("touchstart", iniciarMusica, { once: true });
+document.addEventListener("DOMContentLoaded", () => {
+
+  const musica = document.getElementById("musica");
+
+  function iniciarMusica(){
+    musica.volume = 0.1;
+    musica.play();
+  }
+
+  document.addEventListener("click", iniciarMusica, { once: true });
+  document.addEventListener("touchstart", iniciarMusica, { once: true });
+
+});
