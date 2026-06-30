@@ -36,7 +36,6 @@ function mostrar(){
   const textoEl = document.getElementById("texto");
   const refEl = document.getElementById("ref");
 
-  // fade out
   textoEl.style.opacity = 0;
   refEl.style.opacity = 0;
 
@@ -48,7 +47,6 @@ function mostrar(){
     textoEl.innerText = actual.texto;
     refEl.innerText = actual.ref;
 
-    // fade in
     setTimeout(() => {
       textoEl.style.opacity = 1;
       refEl.style.opacity = 1;
@@ -64,7 +62,7 @@ function nuevoVersiculo(){
 preparar();
 mostrar();
 
-/* 🎧 AUDIO (CORREGIDO PARA MÓVIL Y PC) */
+/* 🎧 AUDIO CORRECTO (MÓVIL + PC) */
 
 document.addEventListener("DOMContentLoaded", () => {
 
