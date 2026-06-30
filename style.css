@@ -1,0 +1,96 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Georgia,serif;
+  padding:20px;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://i.ibb.co/LzvqNPR9/Chat-GPT-Image-30-jun-2026-02-50-30-p-m.png");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.tarjeta{
+  max-width:700px;
+  padding:45px;
+  border-radius:28px;
+  text-align:center;
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.2);
+}
+
+.decoracion{
+  font-size:34px;
+  color:#b58d5b;
+  margin-bottom:15px;
+}
+
+h1{
+  color:#6a4d35;
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+#texto{
+  font-size:28px;
+  line-height:1.8;
+  color:#1f1a16;
+  font-weight:500;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+#ref{
+  margin-top:18px;
+  font-size:18px;
+  font-style:italic;
+  font-weight:600;
+  color:#fff;
+  background: rgba(139, 107, 76, 0.85);
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:12px;
+  letter-spacing:0.5px;
+}
+
+#texto, #ref {
+  transition: opacity 1.2s ease;
+}
+
+button{
+  margin-top:35px;
+  padding:14px 28px;
+  font-size:18px;
+  border:none;
+  border-radius:12px;
+  background:#8b6b4c;
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#6f5339;
+}
+
+.frase{
+  margin-top:25px;
+  font-size:14px;
+  letter-spacing:2px;
+  color:#a58c73;
+}
