@@ -67,7 +67,7 @@ mostrar();
 const musica = document.getElementById("musica");
 
 function iniciarMusica(){
-  musica.volume = 0.07; // volumen suave
+  musica.volume = 0.1; // volumen suave
   musica.play();
 }
 
